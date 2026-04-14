@@ -166,8 +166,19 @@
         .faq-item { background: var(--bg-card); padding: 15px; border-left: 3px solid var(--accent); margin-bottom: 10px; }
         .faq-item strong { color: var(--primary); text-transform: uppercase; font-size: 0.9rem; }
 
-        .testi-card { background: var(--bg-card); padding: 15px; border: 1px solid var(--border); margin-bottom: 15px; border-radius: 8px; }
-        .testi-card img { border-radius: 50%; border: 2px solid var(--primary); }
+        .testi-card { background: var(--bg-card); padding: 15px; border: 1px solid var(--border); margin-bottom: 15px; border-radius: 8px; display: flex; gap: 15px; align-items: flex-start; }
+        
+        /* PERBAIKAN GAMBAR TESTIMONI */
+        .testi-card img { 
+            border-radius: 50%; 
+            border: 2px solid var(--primary); 
+            width: 50px;        /* Memperbaiki Ukuran Gambar */
+            height: 50px;       /* Memperbaiki Ukuran Gambar */
+            object-fit: cover;  /* Agar gambar tetap proporsional */
+            flex-shrink: 0;     /* Mencegah gambar mengecil */
+        }
+
+        .testi-content { flex-grow: 1; } /* Wrapper untuk teks agar rapi */
         .testi-stars { color: var(--text-gold); margin-bottom: 5px; font-size: 0.8rem; }
         .testi-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px; font-style: italic; }
         .testi-card strong { color: white; font-size: 0.85rem; display: block; text-align: right; }
@@ -488,22 +499,30 @@
                     <p style="color:var(--text-muted); grid-column: 1/-1; margin-bottom:15px;">Dipercaya oleh 1000+ player Mobile Legends 🔥</p>        
 
                     <div class="testi-card">
-                        <img src="" style="border-radius:50%; margin-bottom:10px;">
-                        <div class="testi-stars">★★★★★</div>
-                        <p>"Aman banget, dari Legend 3 ke Mitik kurang dari 1 hari 🔥"</p>
-                        <strong>Raplek • Order (Legend 18★)</strong>
+                        <!-- Placeholder diganti agar tidak ada gambar kosong -->
+                        <img src="https://i.pravatar.cc/50?img=12" alt="Avatar">
+                        <div class="testi-content">
+                            <div class="testi-stars">★★★★★</div>
+                            <p>"Aman banget, dari Legend 3 ke Mitik kurang dari 1 hari 🔥"</p>
+                            <strong>Raplek • Order (Legend 18★)</strong>
+                        </div>
                     </div>
                     <div class="testi-card">
-                        <img src="https://i.pravatar.cc/50?img=4" style="border-radius:50%; margin-bottom:10px;">
-                        <div class="testi-stars">★★★★★</div>
-                        <p>"Admin fast respon, WR tinggi. Recommended!"</p>
-                        <strong>Dimas • Order (Legend V -> Mythic) </strong>
+                        <img src="https://i.pravatar.cc/50?img=4" alt="Dimas">
+                        <div class="testi-content">
+                            <div class="testi-stars">★★★★★</div>
+                            <p>"Admin fast respon, WR tinggi. Recommended!"</p>
+                            <strong>Dimas • Order (Legend V -> Mythic) </strong>
+                        </div>
                     </div>
                     <div class="testi-card">
-                        <img src="Andre.png" style="border-radius:50%; margin-bottom:10px;">
-                        <div class="testi-stars">★★★★★</div>
-                        <p>"Gak pernah kena masalah akun. Langganan terus disini."</p>
-                        <strong>Andre • Order (Legend 5★) </strong>
+                        <!-- Jika file Andre.png ada di folder, ganti URL di bawah ini menjadi "Andre.png" -->
+                        <img src="Andre.png" alt="Andre"> 
+                        <div class="testi-content">
+                            <div class="testi-stars">★★★★★</div>
+                            <p>"Gak pernah kena masalah akun. Langganan terus disini."</p>
+                            <strong>Andre • Order (Legend 5★) </strong>
+                        </div>
                     </div>
                 </div>
             </main>
